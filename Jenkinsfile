@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Test) {
+    stage('Test') {
         sh 'echo $pwd'
     }
     stage('CodeGuru Security') {

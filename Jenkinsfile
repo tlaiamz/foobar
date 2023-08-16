@@ -1,5 +1,9 @@
 pipeline {
   agent any
+  environment {
+    AWS_ROLE_ARN = 'arn:aws:iam::461731163182:role/CodeGuruSecurityJenkinsAccessRole'
+    AWS_WEB_IDENTITY_TOKEN_FILE = credentials('aws-jwt')
+  }
   stages {
     stage('CodeGuru Security') {
       steps {

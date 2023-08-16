@@ -7,7 +7,6 @@ pipeline {
   stages {
     stage('CodeGuru Security') {
       steps {
-        sh 'aws codeguru-security list-scans'
         sh 'docker run \
         -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
         -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
